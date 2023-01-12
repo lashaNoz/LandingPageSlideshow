@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.3s;
+}
+
+.change.container {
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.3s 0.2s;
+}
+
+.navbar {
+  position: absolute;
+  top: -10rem;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem;
+  animation: navbarAnim 1s 0.5s forwards;
+}
+
+@keyframes navbarAnim {
+  0% {
+    top: -10rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.logo i {
+  font-size: 5rem;
+  -webkit-text-stroke: 0.1rem #fff;
+  color: transparent;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.navigation a {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-right: 3rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #ccc;
+}
+
+.search-bar > i {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-left: -25rem;
+  cursor: pointer;
+}
+
+.search-top {
+  position: absolute;
+  top: -15rem;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  transition: top 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+.change .search-top {
+  top: 0;
+  pointer-events: all;
+}
+
+.search-top i {
+  font-size: 2rem;
+  color: #555;
+}
+
+.search-top input {
+  width: 100rem;
+  height: 5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  border: none;
+}
+
+.search-top i:last-child {
+  width: 4rem;
+  height: 4rem;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.banner {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  text-align: center;
+  perspective: 100rem;
+}
+
+.banner h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #ddd;
+  margin-bottom: 3rem;
+  animation: bannerAnim 1s 1.5s backwards;
+}
+
+.banner h1 {
+  width: 60rem;
+  font-size: 7rem;
+  color: #fff;
+  text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.7);
+  animation: bannerAnim 1s 2s backwards;
+}
+
+@keyframes bannerAnim {
+  0% {
+    transform: translateZ(-10rem) translateY(-1rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #262b32;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  display: flex;
+  flex-direction: column;
+  transform: rotateZ(-90deg);
+  margin-left: 5rem;
+}
+
+.swiper .swiper-button-next {
+  transform: rotateZ(90deg);
+  margin-right: 5rem;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  content: "";
+}
+
+.swiper .swiper-button-next i,
+.swiper .swiper-button-prev i {
+  font-size: 6rem;
+  -webkit-text-stroke: 0.1rem #fff;
+  color: transparent;
+}
+
+.swiper .swiper-button-next span,
+.swiper .swiper-button-prev span {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: -1rem;
+  color: #fff;
+}
+
+span.swiper-pagination-bullet {
+  width: 5rem;
+  height: 5rem;
+  opacity: 1;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  margin-right: 2rem !important;
+}
+
+span.swiper-pagination-bullet:nth-child(1) {
+  background: url(images/img1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+span.swiper-pagination-bullet:nth-child(2) {
+  background: url(images/img2.jpg) center no-repeat;
+  background-size: cover;
+}
+
+span.swiper-pagination-bullet:nth-child(3) {
+  background: url(images/img3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+span.swiper-pagination-bullet:nth-child(4) {
+  background: url(images/img4.jpg) center no-repeat;
+  background-size: cover;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: 0.2rem solid #fff;
+}

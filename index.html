@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Urbanist:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Gallery</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="search-top">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Type keyword and hit enter..." />
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <h3>I am John Smith</h3>
+        <h1>Wedding & Event Photographer</h1>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/img1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img4.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-caret-up"></i>
+          <span>Prev</span>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fa-solid fa-caret-up"></i>
+          <span>Next</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
